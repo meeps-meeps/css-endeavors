@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-01: hsl(31, 77%, 52%);
+    --clr-primary-02: hsl(184, 100%, 22%);
+    --clr-primary-03: hsl(179, 100%, 13%);
+
+    --clr-neutral-01: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-02: hsl(0, 0%, 95%);
+
+    --ff-heading: 'Big Shoulders Display', cursive;
+    --ff-body: 'Lexend Deca', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 4em 2em;
+}
+
+/* Typography */
+h1 {
+    font-family: var(--ff-heading);
+    font-size: 2.5rem;
+    color: var(--clr-neutral-02);
+}
+
+p, a {
+    font-family: var(--ff-body);
+    font-size: 0.938rem;
+    color: var(--clr-neutral-01);
+}
+
+p {
+    line-height: 1.8em;
+}
+
+/* Main CSS */
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    padding: 3em;
+}
+
+.card--one {
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: var(--clr-primary-01);
+}
+
+.card--two {
+    background-color: var(--clr-primary-02);
+}
+
+.card--three {
+    border-radius: 0 0 0.5em 0.5em;
+    background-color: var(--clr-primary-03);
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+    background-color: white;
+    padding: 0.8em 1.8em;
+    border-radius: 5em;
+}
+
+.cta--one {
+    color: var(--clr-primary-01);
+    border: 2px solid white;
+}
+
+.cta--one:hover, .cta--one:focus{
+    background-color: var(--clr-primary-01);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta--two {
+    color: var(--clr-primary-02);
+    border: 2px solid white;
+}
+
+.cta--two:hover, .cta--two:focus{
+    background-color: var(--clr-primary-02);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta--three {
+    color: var(--clr-primary-03);
+    border: 2px solid white;
+}
+
+.cta--three:hover, .cta--three:focus{
+    background-color: var(--clr-primary-03);
+    color: white;
+    border: 2px solid white;
+}
+
+@media (min-width: 750px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        max-width: 1440px;
+        min-height: 60%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card--one {
+        border-radius: 0.5em 0 0 0.5em;
+    }
+
+    .card--three {
+        border-radius: 0 0.5em 0.5em 0;
+    }
+
+    .cta {
+        margin-top: 8em;
+    }
+
+    /* .cta {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 3em;
+    } */
+}
+ 
+/* Attribution */
+/* .attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
